@@ -37,7 +37,7 @@ public class HotelService : IHotelService
         return Hoteis.Where(p => p.Nome == Nome).FirstOrDefault();
     }
 
-    public HoteisDto GetHoteisDto();
+    public HoteisDto GetHoteisDto()
     {
         var Hote = new HoteisDto()
         {
@@ -48,19 +48,17 @@ public class HotelService : IHotelService
         return Hote;
     }
 
-    public DetailsDto GetDetailedHotel(string Nome)
+        public DetailsDto GetDetailedHotel(string Nome)
     {
-        var Hoteis = GetHotels();
-        var Hote = new DetailsDto()
+        var Hoteis = GetHotels().ToArray();
+        var index = Array.IndexOf(Hoteis, Hoteis.Where(p => p.Nome.Equals(Nome)).FirstOrDefault());
+        var Hotel = new DetailsDto()
         {
-            Current = Hoteis.Where(p => p.Nome == Nome)
-                .FirstOrDefault(),
-            Prior = Hoteis.OrderByDescending(p => p.Nome)
-                .FirstOrDefault(p => p.Numero < Numero),
-            Next = Hoteis.OrderBy(p => p.Nome)
-                .FirstOrDefault(p => p.Nome > Nome),
+            Current = Hoteis[index],
+            Prior = index - 1 < 0 ? null : Hoteis[index - 1],
+            Next = index + 1 >= Hoteis.Count() ? null : Hoteis[index + 1]
         };
-        return Hote;
+        return Hotel;
     }
 
     public Estado GetEstado(string Nome)
@@ -71,12 +69,19 @@ public class HotelService : IHotelService
 
     private void PopularSessao()
     {
-        if (string.IsNullOrEmpty(_Session.HttpContext.Session.GetString("Estados")))
+        if (string.IsNullOrEmpty(_session.HttpContext.Session.GetString("Estados")))
         {
-            _session.HttpContext.Session
-                .SetString("Hoteis", LerArquivo(hotelFile));
-            _session.HttpContext.Session
-                .SetString("Estados", LerArquivo(estadosFile));
+            _session.HttpContext.Session.SetString("Hoteis", LerArquivo(hotelFile));
+            _session.HttpContext.Session.SetString("Estados", LerArquivo(estadoFile));
+        }
+    }
+
+    private string LerArquivo(string fileName)
+    {
+        using (StreamReader leitor = new StreamReader(fileName))
+        {
+            string dados = leitor.ReadToEnd();
+            return dados;
         }
     }
 }
