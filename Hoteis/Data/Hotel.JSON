@@ -5,7 +5,7 @@
         "Estado": "Bahia",
         "Descricao": "Este hotel boutique despojado chique com ares tropicais fica a 1 minuto a pé da Igreja de São João Batista e do centro histórico da cidade, o Quadrado, a 8 minutos de caminhada da praia e a 6 km do Terravista Golf Course. Chalés decorados individualmente com 1, 2 ou 3 quartos oferecem elementos únicos como jardins, piscinas de imersão, varanda, teto de palha e/ou cozinhas externa e interna. Wi-Fi disponível.",
         "Diaria": 2500.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\01.png"
     },
     {
         "Nome": "Pousada BGK",
@@ -13,7 +13,7 @@
         "Estado": "Piauí",
         "Descricao": "Esta hospedaria tranquila fica perto da Praia de Barra Grande, banhada pelo Oceano Atlântico Sul, e a 8 km da cidade litorânea de Cajueiro da Praia. Os chalés de madeira simples com telhado de sapê acomodam até sete hóspedes e oferecem TV por satélite e frigobar. Alguns incluem sacada, banheira de hidromassagem e/ou vista para o mar. Serviço de quarto disponível.",
         "Diaria": 632.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\02.png"
     },
     {
         "Nome": "Banana Bamboo Ecolodge",
@@ -21,7 +21,7 @@
         "Estado": "São Paulo",
         "Descricao": "Somos um Ecolodge, isso quer dizer que somos um hotel ecologicamente sustentável. Por isso, levamos à risca a prática de valores nos quais acreditamos. De modo que sabemos ser plenamente possível fazer do Turismo uma atividade sustentável e economicamente viável. O Banana Bamboo Ecolodge está em área Rural, ao norte de Ubatuba, bem próximo à divisa com Paraty/RJ. No meio da Mata, onde cresce banana, mandioca, juçara, urucum, entre outros alimentos e frutos nativos na Mata Atlântica. Temos o privilégio de estarmos situados em uma parte da cidade que ainda preserva locais pouco, ou quase nada, explorados.",
         "Diaria": 1000.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\03.png"
     },
     {
         "Nome": "Meridiano Hotel",
@@ -29,7 +29,7 @@
         "Estado": "Alagoas",
         "Descricao": "Este hotel refinado com vista para o Oceano Atlântico Sul fica a poucos minutos de caminhada da Praia de Pajuçara e a 2 km do MISA - Museu da Imagem e do Som de Alagoas. Suítes descontraídas com Wi-Fi gratuito, TV com tela plana e frigobar. Algumas dispõem de sacadas, banheira de hidromassagem ao ar livre, área de estar separada e/ou sofá-cama. Serviço de quarto disponível.",
         "Diaria": 390.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\04.png"
     },
     {
         "Nome": "CDesign Hotel",
@@ -37,7 +37,7 @@
         "Estado": "Rio de Janeiro",
         "Descricao": "Em uma estrada repleta de restaurantes e de frente para a Praia do Recreio dos Bandeirantes, este hotel descontraído com fachada branca fica a 3 km da rodoviária mais próxima. Os quartos simples têm Wi-Fi gratuito, TV com tela plana, frigobar, cofre e sacada. Alguns quartos de categoria mais alta têm vista para o mar. As suítes incluem espreguiçadeiras. Serviço de quarto 24 horas. A estadia de crianças com até 6 anos (uma por quarto) acompanhadas pela família é gratuita.",
         "Diaria": 450.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\05.png"
     },
     {
         "Nome": "Vidam Hotel Aracaju",
@@ -45,7 +45,7 @@
         "Estado": "Sergipe",
         "Descricao": "Situado entre prédios de apartamentos, este hotel refinado fica a 15 minutos a pé da Praia de Atalaia, a 2 km dos Arcos da Orla e a 6 km do Aeroporto Santa Maria. Os quartos descontraídos têm Wi-Fi, TV com tela plana, frigobar, chaleira e cafeteira. Os quartos de categoria mais alta têm sacada com vista para o mar. As suítes incluem sala de estar. As suítes de categoria mais alta têm área de refeições e/ou banheira de hidromassagem.",
         "Diaria": 720.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\06.png"
     },
     {
         "Nome": "Hotel Sombra e Água Fresca",
@@ -53,7 +53,7 @@
         "Estado": "Rio Grande do Norte",
         "Descricao": "Este hotel rústico-chique fica em uma área tropical com vista para o Oceano Atlântico, a 6 minutos a pé da Praia do Amor e a 2 km da trilha de caminhada do Santuário Ecológico. Quartos sofisticados, suítes e chalés com teto com revestimento de madeira, Wi-Fi gratuito e TV com tela plana. Alguns quartos dispõem de sauna, piscina particular, banheira de hidromassagem e/ou vista para o mar. Serviço de quarto disponível.",
         "Diaria": 900.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\07.png"
     },
     {
         "Nome": "Hotel Vila Germânica",
@@ -61,6 +61,6 @@
         "Estado": "Santa Catarina",
         "Descricao": "A 5 minutos de caminhada do Parque Aquático Termas de Piratuba e do Rio do Peixe, este hotel casual fica também a 5 km das cachoeiras no Parque da Cascata. Os quartos mobilados de maneira simples oferecem Wi-Fi gratuito, TVs com tela plana e frigobar. Os quartos de categorias mais altas incluem varandas, e alguns têm banheiras de hidromassagem.",
         "Diaria": 700.00,
-        "Imagem": ""
+        "Imagem": "\\img\\hoteis\\08.png"
     }
 ]
