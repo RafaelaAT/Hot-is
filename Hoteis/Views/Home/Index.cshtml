@@ -1,8 +1,52 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿@model HoteisDto
+@inject Hoteis.Services.IHotelService service
+@{
+    ViewData["Title"] = "Home";
+}<section class="pt-5 pb-3 text-center container">
+    <div class="row">
+        <div class="col mx-auto">
+            <h1>Hotel</h1>
+            <div class="group">
+                <button id="btn-all" class="btn btn-sm my-2 text-black btn-filter" onclick="filter('all')">
+                    Ver Todos
+                </button>
+                @foreach (var tipo in Model.Estados)
+                {
+                    <button id="btn-@tipo.Nome.ToLower()" class="btn btn-sm my-2 text-black btn-filter" onclick="filter('@tipo.Nome.ToLower()')">@tipo.Nome
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+            @foreach (var Hotel in Model.Hoteis)
+            {
+                <div class="col">
+                    <div class="card shadow-sm cursor-pointer @string.Join(' ',
+Hotel.Estado).ToLower()" onclick="GetInfo(@Hotel.Nome)">
+                        <img src="@Hotel.Imagem" class="card-img-top" width="100%" height="300" alt="@Hotel.Nome" />
+                        <div class="card-body">
+                            <h3 class="card-title text-center">@Hotel.Nome</h3>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div id="zeroHotel" class="col-lg-12 text-center">
+                <h1 class="my-3 text-danger">Nenhum Hotel Encontrado</h1>
+            </div>
+        </div>
+    </div>
 </div>
+@section Scripts{
+<script src="~/js/site.js"></script>
+<script>
+    let toFilter = '@Html.Raw(ViewData["Filter"])';
+    filter(toFilter);
+    function GetInfo(nome) {
+        window.location = '@Url.Action("Details", "Home")' + '?Nome=' + nome;
+    }
+</script>
+}
