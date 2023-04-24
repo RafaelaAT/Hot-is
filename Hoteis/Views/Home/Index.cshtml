@@ -12,7 +12,7 @@
                 </button>
                 @foreach (var tipo in Model.Estados)
                 {
-                    <button id="btn-@tipo.Nome.ToLower()" class="btn btn-sm my-2 text-black btn-filter" onclick="filter('@tipo.Nome.ToLower()')">@tipo.Nome
+                    <button id="btn-@tipo.Nome.Replace(' ', '-').ToLower()" class="btn btn-sm my-2 text-black btn-filter" onclick="filter('@tipo.Nome.Replace(' ', '-').ToLower()')">@tipo.Nome
                     </button>
                 }
             </div>
@@ -25,8 +25,7 @@
             @foreach (var Hotel in Model.Hoteis)
             {
                 <div class="col">
-                    <div class="card shadow-sm cursor-pointer @string.Join(' ',
-Hotel.Estado).ToLower()" onclick="GetInfo(@Hotel.Nome)">
+                    <div class="card shadow-sm cursor-pointer @string.Join(' ',Hotel.Estado.Replace(' ', '-')).ToLower()" onclick="GetInfo('@Hotel.Nome')">
                         <img src="@Hotel.Imagem" class="card-img-top" width="100%" height="300" alt="@Hotel.Nome" />
                         <div class="card-body">
                             <h3 class="card-title text-center">@Hotel.Nome</h3>

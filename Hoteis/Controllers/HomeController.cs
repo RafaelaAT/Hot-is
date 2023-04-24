@@ -26,7 +26,7 @@ public class HomeController : Controller
     public IActionResult Details(string Nome)
     {
         var hotel = _hotelService.GetDetailedHotel(Nome);
-        return View();
+        return View(hotel);
     }
 
     public IActionResult Privacy()

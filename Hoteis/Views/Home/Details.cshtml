@@ -9,7 +9,7 @@
             <div class="col text-center">
                 @if (Model.Prior != null)
                 {
-                    <a asp-action="Details" asp-route-Name="@Model.Prior.Nome" class="btn btn-lg btn-outline-dark">
+                    <a asp-action="Details" asp-route-Nome="@Model.Prior.Nome" class="btn btn-lg btn-outline-dark">
                         @Model.Prior.Nome
                     </a>
                 }
@@ -20,14 +20,17 @@
             <div class="col text-center">
                 @if (Model.Next != null)
                 {
-                    <a asp-action="Details" asp-route-Name="@Model.Next.Nome" class="btn btn-lg btn-outline-dark">
+                    <a asp-action="Details" asp-route-Nome="@Model.Next.Nome" class="btn btn-lg btn-outline-dark">
                         @Model.Next.Nome
                     </a>
                 }
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-lg-9 fs-5 mt-4">
+             <div class="col-lg-5.5 p-0 pe-5 text-center">
+                <img class="img-fluid cursor-pointer" src="@Model.Current.Imagem" alt="@Model.Current.Nome">
+            </div>
+            <div class="col-lg-5.5 fs-5 mt-4">
                 <table class="table">
                     <tr>
                         <td class="fw-bold w-25">Cidade:</td>
